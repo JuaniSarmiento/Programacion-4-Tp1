@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Usuarios - UTN</title>
+    <link rel="stylesheet" href="/static/lista.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listado de Usuarios</h1>
+
+        <div class="buscador">
+            <input type="text" id="txtBuscar" placeholder="Buscar por usuario..." maxlength="20">
+            <button id="btnBuscar">Buscar</button>
+            <button id="btnLimpiar">Mostrar Todos</button>
+        </div>
+
+        <table id="tablaUsuarios">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Usuario</th>
+                    <th>Apellido</th>
+                    <th>Nombre</th>
+                    <th>Bloqueado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+            </tbody>
+        </table>
+
+        <p id="mensajeLista" class="mensaje"></p>
+
+        <a href="/" class="volver">Volver al Login</a>
+    </div>
+    <script src="/static/lista.js"></script>
+</body>
+</html>

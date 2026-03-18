@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 30px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+}
+
+.buscador {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.buscador button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#btnBuscar {
+    background-color: #4a90d9;
+}
+
+#btnBuscar:hover {
+    background-color: #357abd;
+}
+
+#btnLimpiar {
+    background-color: #6c757d;
+}
+
+#btnLimpiar:hover {
+    background-color: #565e64;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+thead {
+    background-color: #343a40;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Colores de fila según estado de bloqueo */
+tr.bloqueado {
+    background-color: #fd9f8b;
+}
+
+tr.activo {
+    background-color: #cef8c6;
+}
+
+.btn-accion {
+    padding: 6px 14px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 13px;
+    color: #fff;
+    margin-right: 5px;
+}
+
+.btn-bloquear {
+    background-color: #d9534f;
+}
+
+.btn-bloquear:hover {
+    background-color: #c9302c;
+}
+
+.btn-desbloquear {
+    background-color: #5cb85c;
+}
+
+.btn-desbloquear:hover {
+    background-color: #449d44;
+}
+
+.mensaje {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 10px;
+    min-height: 20px;
+}
+
+.volver {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4a90d9;
+    text-decoration: none;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}

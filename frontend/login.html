@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - UTN</title>
+    <link rel="stylesheet" href="/static/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" name="usuario" maxlength="20" required>
+            </div>
+            <div class="form-group">
+                <label for="clave">Clave</label>
+                <input type="password" id="clave" name="clave" maxlength="20" required>
+            </div>
+            <button type="submit">Ingresar</button>
+            <p id="mensaje" class="mensaje"></p>
+        </form>
+    </div>
+    <script src="/static/login.js"></script>
+</body>
+</html>
