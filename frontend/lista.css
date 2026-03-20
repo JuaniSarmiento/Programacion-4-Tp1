@@ -19,10 +19,30 @@ body {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    text-align: center;
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 25px;
+}
+
+h1 {
     color: #333;
+    margin: 0;
+}
+
+.btn-logout {
+    padding: 8px 16px;
+    background-color: #dc3545;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+.btn-logout:hover {
+    background-color: #c82333;
 }
 
 .buscador {
@@ -121,16 +141,4 @@ tr.activo {
     font-weight: bold;
     margin-bottom: 10px;
     min-height: 20px;
-}
-
-.volver {
-    display: block;
-    text-align: center;
-    margin-top: 15px;
-    color: #4a90d9;
-    text-decoration: none;
-}
-
-.volver:hover {
-    text-decoration: underline;
 }

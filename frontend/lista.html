@@ -8,7 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>Listado de Usuarios</h1>
+        <div class="header">
+            <h1>Listado de Usuarios</h1>
+            <a href="/" class="btn-logout">Salir</a>
+        </div>
 
         <div class="buscador">
             <input type="text" id="txtBuscar" placeholder="Buscar por usuario..." maxlength="20">
@@ -32,8 +35,6 @@
         </table>
 
         <p id="mensajeLista" class="mensaje"></p>
-
-        <a href="/" class="volver">Volver al Login</a>
     </div>
     <script src="/static/lista.js"></script>
 </body>

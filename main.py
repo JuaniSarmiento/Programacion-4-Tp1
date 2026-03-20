@@ -2,6 +2,7 @@ from fastapi import FastAPI, Query, Body
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+import os
 import psycopg2
 import psycopg2.extras
 
@@ -18,11 +19,11 @@ app.add_middleware(
 # --- Conexión a PostgreSQL ---
 
 DB_CONFIG = {
-    "host": "localhost",
-    "database": "utn_db",
-    "user": "postgres",
-    "password": "postgres",
-    "port": 5432,
+    "host": os.getenv("DB_HOST", "localhost"),
+    "database": os.getenv("DB_NAME", "utn_db"),
+    "user": os.getenv("DB_USER", "postgres"),
+    "password": os.getenv("DB_PASSWORD", "postgres"),
+    "port": int(os.getenv("DB_PORT", "5432")),
 }
 
 
@@ -101,6 +102,8 @@ def bloquear(data: dict = Body(...)):
     id_user = data.get("idUser")
     estado = data.get("estado")
 
+    if not id_user or not isinstance(id_user, int):
+        return {"respuesta": "ERROR", "mje": "ID de usuario inválido"}
     if estado not in ("Y", "N"):
         return {"respuesta": "ERROR", "mje": "Estado inválido"}
 
